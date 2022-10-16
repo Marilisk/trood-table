@@ -1,17 +1,12 @@
 import React from 'react';
 import c from './HeadCells.module.css';
-
-/* const StatusHeadCell = ({makeSort, sort, reverseSort, filters, makeFilter}) => {
-
-  return <th onClick={() => makeSort('status')} className={c.statusCol}>
-  
-  </th>
-} */
+import sortDown from './../../images/sort-down.png';
+import sortUp from './../../images/sort-up.png';
 
 const options = ['All', 'green', 'yellow', 'red']
-    .map((elem) => <option value={elem} label={elem} key={elem} />);
+  .map((elem) => <option value={elem} label={elem} key={elem} />);
 
-const NameHeadCell = ({makeSort, sort, reverseSort, filters, makeFilter}) => {
+const NameHeadCell = ({ makeSort, sort, filters, makeFilter }) => {
 
   return <th name='name' className={c.nameCol}>
     <select className={c.statusSelect}
@@ -20,15 +15,16 @@ const NameHeadCell = ({makeSort, sort, reverseSort, filters, makeFilter}) => {
       onChange={e => makeFilter('status', e.currentTarget.value)}>
       {options}
     </select>
-  <div className={c.selStatusFilter}>{filters.status}</div>
-  <span className={sort === 'name' ? c.activeColHead : c.colHead}
-    onClick={() => makeSort('name')}>
-    {(sort === 'name' && reverseSort) && '-'}Project
-  </span>
-</th>
+    <div className={c.selStatusFilter}>{filters.status}</div>
+    <span className={sort.field === 'name' ? c.activeColHead : c.colHead}
+      onClick={() => makeSort('name')}>
+      {(sort.field === 'name') && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
+      Project
+    </span>
+  </th>
 }
 
-const TypeHeadCell = ({makeSort, sort, reverseSort, filters, makeFilter}) => {
+const TypeHeadCell = ({ makeSort, sort, filters, makeFilter }) => {
 
   const options = ['All', 'TRST', 'THT', 'THC']
     .map((elem) => <option value={elem} label={elem} key={elem} />);
@@ -38,9 +34,10 @@ const TypeHeadCell = ({makeSort, sort, reverseSort, filters, makeFilter}) => {
       {options}
     </select>
     <div className={c.selTypeFilter}>{filters.type}</div>
-    <span className={sort === 'type' ? c.activeColHead : c.colHead}
+    <span className={sort.field === 'type' ? c.activeColHead : c.colHead}
       onClick={() => makeSort('type')}>
-      {(sort === 'type' && reverseSort) && '-'}Token type
+      {(sort.field === 'type') && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
+      Token type
     </span>
   </th>
 }
@@ -53,11 +50,12 @@ export const HeadCells = ({ makeSort, sort, reverseSort, filters, makeFilter }) 
     { label: 'Free float', name: 'free' },
     { label: 'Insurance hedge', name: 'hedge' },]
     .map(elem => {
-      return <th className={sort === elem.name ? c.activeColHead : c.colHead}
+      return <th className={sort.field === elem.name ? c.activeColHead : c.colHead}
         key={elem.name}
         name={elem.name}
         onClick={(e) => makeSort(e.currentTarget.getAttribute('name'))}>
-        {(sort === elem.name && reverseSort) && '-'} {elem.label}
+        {(sort.field === elem.name) && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
+        {elem.label}
       </th>
     });
 
@@ -67,14 +65,5 @@ export const HeadCells = ({ makeSort, sort, reverseSort, filters, makeFilter }) 
     {cells}
   </>;
 }
-
-
-
-
-
-
-
-
-
 
 

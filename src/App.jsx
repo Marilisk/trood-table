@@ -1,15 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { onSort, onFilter, onBuy } from './redux/tableSlice.js';
-
-//import c from './App.module.css';
 import { Table } from './Table/Table.jsx';
 
 function App() {
   const dispatch = useDispatch();
   const items = useSelector(state => state.table.items);
   const sort = useSelector(state => state.table.sort);
-  const reverseSort = useSelector(state => state.table.reverseSort);
   const filters = useSelector(state => state.table.filters);
 
   const filteredItems = items.filter(elem => {
@@ -27,17 +24,14 @@ function App() {
     dispatch(onBuy(id));
   }
   const redirect = (id, eventId) => {
-    console.log(eventId);
     if (eventId !== 'buy') {
       window.location.href=`/project/${id}`; 
     }
-    //return true;
   }
 
   return (
     <div>
       <Table sort={sort}
-        reverseSort={reverseSort}
         filters={filters}
         filteredItems={filteredItems}
         makeSort={makeSort}

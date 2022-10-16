@@ -3,7 +3,7 @@ import { HeadCells } from './HeadCells/HeadCells';
 import { Rows } from './Rows/Rows';
 import c from './Table.module.css';
 
-export const Table = ({ sort, reverseSort, filters, filteredItems, makeSort, makeFilter, buy, redirect }) => {
+export const Table = ({ sort, filters, filteredItems, makeSort, makeFilter, buy, redirect }) => {
 
   return <table>
 
@@ -20,7 +20,7 @@ export const Table = ({ sort, reverseSort, filters, filteredItems, makeSort, mak
 
       <tbody>
         <tr>
-          <HeadCells makeSort={makeSort} sort={sort} reverseSort={reverseSort} filters={filters} makeFilter={makeFilter} />
+          <HeadCells makeSort={makeSort} sort={sort} filters={filters} makeFilter={makeFilter} />
         </tr>
       </tbody>
 

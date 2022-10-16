@@ -3,7 +3,7 @@
 }
 table {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 14px;
   font-weight: 600;
   width: 900px;
@@ -15,11 +15,6 @@ td {
   padding: 10px;
   padding-right: 38px;
   box-sizing: border-box;
-}
-
-
-.name {
-  width: 220px;
 }
 
 
