@@ -1,0 +1,69 @@
+.green,
+.yellow,
+.red,
+.headRow {
+    height: 68px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 6px solid white;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.green {
+    background: #F1FEF3;
+}
+
+.yellow {
+    background: #FDFEE9;
+}
+
+.red {
+    background: #FFF8F8;
+}
+
+.redIndicator,
+.greenIndicator,
+.yellowIndicator {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: none;
+    display: inline-block;
+    padding: 0;
+    margin-right: 6px;
+    margin-left: 26px;
+    border: 1px solid pink;
+}
+
+.redIndicator {
+    background: #F46246;
+    border: 1px solid #CA6953;
+}
+
+.greenIndicator {
+    background: #0EDF3B;
+    border: 1px solid #21C341;
+}
+
+.yellowIndicator {
+    background: #FEB908;
+    border: 1px solid #D5B33D;
+}
+
+.buyBtn {
+    background: #B91BB9;
+    color: white;
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.buyBtn:hover {
+    transition: 200ms;
+    background: transparent;
+    color: #B91BB9;
+    border-color: #B91BB9;
+
+}

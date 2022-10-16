@@ -1,0 +1,60 @@
+.statusCol {
+  max-width: 8px;  
+}
+.statusSelect {
+  margin: 0;
+  margin-left: 32px;
+}
+.nameCol, .typeCol {
+  text-align: left;
+}
+
+.nameCol {
+  min-width: 234px;
+}
+.typeCol {
+  min-width: 158px;
+}
+.selStatusFilter,
+.selTypeFilter {
+  background: #9C9DA3;
+  color: white;
+  width: auto;
+  max-width: 40px;
+  display: inline;
+  padding: 3px;
+  padding-right: 5px;
+  border-radius: 6px;
+  margin-right: 0; 
+}
+.colHead, .activeColHead {
+  cursor: pointer;
+  min-width: 110px;
+  text-align: left;
+  padding-left: 2px;
+  
+}
+.colHead {
+  color: #9C9DA3; 
+  
+}
+.activeColHead {
+  font-weight: 700;
+}
+select {
+  width: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  margin-left: 10px;
+}
+
+option {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.typeCol select {
+  margin-left: 4px;
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0; 
+}
+table {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 900px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  
+}
+td {
+  padding: 10px;
+  padding-right: 38px;
+  box-sizing: border-box;
+}
+
+
+.name {
+  width: 220px;
+}
+
+
+
+
+
+
+
