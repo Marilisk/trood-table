@@ -2,7 +2,7 @@ import React from 'react';
 import c from './Rows.module.css';
 
 export const Rows = ({ filteredItems, redirect, buy }) => {
-  
+
   const rows = filteredItems.map(elem => {
     const volume = elem.volume;
     const formattedVolume = new Intl.NumberFormat("ru").format(volume);

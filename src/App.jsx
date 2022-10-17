@@ -25,7 +25,7 @@ function App() {
   }
   const redirect = (id, eventId) => {
     if (eventId !== 'buy') {
-      window.location.href=`/project/${id}`; 
+      window.location.href = `/project/${id}`;
     }
   }
 

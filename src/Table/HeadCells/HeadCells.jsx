@@ -18,8 +18,8 @@ const NameHeadCell = ({ makeSort, sort, filters, makeFilter }) => {
     <div className={c.selStatusFilter}>{filters.status}</div>
     <span className={sort.field === 'name' ? c.activeColHead : c.colHead}
       onClick={() => makeSort('name')}>
-      {(sort.field === 'name') && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
       Project
+      {(sort.field === 'name') && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
     </span>
   </th>
 }
@@ -36,8 +36,8 @@ const TypeHeadCell = ({ makeSort, sort, filters, makeFilter }) => {
     <div className={c.selTypeFilter}>{filters.type}</div>
     <span className={sort.field === 'type' ? c.activeColHead : c.colHead}
       onClick={() => makeSort('type')}>
-      {(sort.field === 'type') && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
       Token type
+      {(sort.field === 'type') && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
     </span>
   </th>
 }
@@ -54,8 +54,8 @@ export const HeadCells = ({ makeSort, sort, reverseSort, filters, makeFilter }) 
         key={elem.name}
         name={elem.name}
         onClick={(e) => makeSort(e.currentTarget.getAttribute('name'))}>
-        {(sort.field === elem.name) && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
         {elem.label}
+        {(sort.field === elem.name) && <img alt='' src={sort.reverseSort ? sortUp : sortDown} />}
       </th>
     });
 
